@@ -25,9 +25,10 @@ int main(int argc, char const *argv[])
         {
             if (buff[len - 1] == '\n')
                 buff[len - 1] = '\0';
-            printf("line %d :%s\n", line, buff);
+            printf("line %d: %s\n", line, buff);
         }
     }
+   
     return 0;
 }
 #endif
