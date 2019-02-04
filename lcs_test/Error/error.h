@@ -5,11 +5,12 @@
     
  *****************************/
 
-#define CODE_ERROR(error_type, error_code) \
-    {                                      \
-        fprintf(stderr, ERROR,             \
-                error_type, error_code);   \
-        exit(error_code);                  \
+#define CODE_ERROR(show_on_where, error_type, error_code) \
+    {                                                     \
+        fprintf(show_on_where, ERROR,                     \
+                error_type, error_code);                  \
+        fprintf(show_on_where, "\n");                     \
+        exit(error_code);                                 \
     }
 
 #define ERROR "error : %s\n" \
